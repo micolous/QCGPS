@@ -1,0 +1,13 @@
+QCGPS
+Michael Farrell <http://micolous.id.au/>
+
+QCGPS is a Quartz Composer patch to allow you to connect to a classic (read: NOT JSON) GPSd, such as GPSdX, and use data from the GPS in your QC compositions.
+
+At the moment, it's very buggy, and only supports connecting to a local GPSd.
+
+
+TODO LIST:
+
+- Fix connecting to remote servers.
+- Fix buffering issues with some implementations of GPSd.
+- Fix crash on connection failure.
