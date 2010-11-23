@@ -3,8 +3,20 @@
 //  QCGPS
 //
 //  Created by Michael Farrell on 2010-11-17.
-//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2010 Michael Farrell. All rights reserved.
 //
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//  
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* It's highly recommended to use CGL macros instead of changing the current context for plug-ins that perform OpenGL rendering */
 #import <OpenGL/CGLMacro.h>
@@ -234,7 +246,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	}
 	
 	int valid;
-	double ns, ew, elev, velkt, hdop, veldir, numsat, shdop;
+	double ns, ew, elev, velkt, veldir, numsat, shdop;
 	if (sscanf(gpsbuf, "GPSD,P=%lg %lg,M=%d,V=%lg,T=%lg,A=%lg,Q=%lg %*lg %lg",
 			   &ns, &ew, &valid, &velkt, &veldir, &elev, &numsat, &shdop) >= 4) {
 		self.outputHasFix = valid >= 2;
